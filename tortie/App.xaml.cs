@@ -8,7 +8,10 @@ namespace tortie
 		{
 			InitializeComponent();
 
-			MainPage = new tortiePage();
+			// 参考: https://github.com/xamarin/xamarin-forms-samples/tree/master/Forms2Native
+			var mainNav = new NavigationPage(new tortiePage());
+
+			MainPage = mainNav;
 		}
 
 		protected override void OnStart()
