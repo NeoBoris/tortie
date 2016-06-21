@@ -33,7 +33,17 @@ namespace tortie
 
 		void Handle_OkButtonClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new ResultPage());
+			var personalData = new PersonalData
+			{
+				Age = int.Parse(agePicker.Items[agePicker.SelectedIndex]),
+				RentMoney = int.Parse(RentMoneyEditor.Text)
+			};
+
+			Navigation.PushAsync(
+				new ResultPage()
+				{
+					PersonalData = personalData
+				});
 		}
 	}
 }

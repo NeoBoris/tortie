@@ -4,7 +4,7 @@
 		<Label Text="年齢" />
 		<local:BindablePicker x:Name="agePicker" ItemsSource="{Binding Ages}" />
 		<Label Text="家賃" />
-		<Editor />
+		<Editor x:Name="RentMoneyEditor" />
 		<Button Text="OK" x:Name="OkButton" Clicked="Handle_OkButtonClicked"/>
 	</StackLayout>
 </ContentPage>
